@@ -1,0 +1,454 @@
+[
+  {
+    "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=1",
+    "name": "PIB — Ministry of MSME",
+    "category": "government",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+    "name": "PIB — Ministry of Commerce",
+    "category": "government",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=6",
+    "name": "PIB — Ministry of Finance",
+    "category": "government",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=25",
+    "name": "PIB — Ministry of Industry",
+    "category": "government",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=20",
+    "name": "PIB — Regional (Hindi)",
+    "category": "government",
+    "tier": 1,
+    "language": "hi",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://economictimes.indiatimes.com/rss.cms",
+    "name": "Economic Times — Top News",
+    "category": "business",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://economictimes.indiatimes.com/industry/rssfeeds/13352306.cms",
+    "name": "Economic Times — Industry",
+    "category": "industry",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms",
+    "name": "Economic Times — Markets",
+    "category": "markets",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://b2b.economictimes.indiatimes.com/rss/topstories",
+    "name": "ET B2B — Top Stories",
+    "category": "b2b",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://livemint.com/rss/markets",
+    "name": "Mint — Markets",
+    "category": "markets",
+    "tier": 2,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://livemint.com/rss/companies",
+    "name": "Mint — Companies",
+    "category": "business",
+    "tier": 2,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://livemint.com/rss/news",
+    "name": "Mint — Top News",
+    "category": "business",
+    "tier": 2,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.business-standard.com/rss/latest.rss",
+    "name": "Business Standard — Latest",
+    "category": "business",
+    "tier": 2,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.business-standard.com/rss/sme.rss",
+    "name": "Business Standard — SME",
+    "category": "msme",
+    "tier": 2,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.financialexpress.com/market/rss/",
+    "name": "Financial Express — Markets",
+    "category": "markets",
+    "tier": 2,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.financialexpress.com/industry/rss/",
+    "name": "Financial Express — Industry",
+    "category": "industry",
+    "tier": 2,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.moneycontrol.com/rss/latestnews.xml",
+    "name": "MoneyControl — Latest",
+    "category": "finance",
+    "tier": 2,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.moneycontrol.com/rss/business.xml",
+    "name": "MoneyControl — Business",
+    "category": "business",
+    "tier": 2,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://inc42.com/category/startups/feed",
+    "name": "Inc42 — Startups",
+    "category": "startups",
+    "tier": 3,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://inc42.com/category/features/feed",
+    "name": "Inc42 — Features",
+    "category": "startups",
+    "tier": 3,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://yourstory.com/feed",
+    "name": "YourStory",
+    "category": "startups",
+    "tier": 3,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.cnbctv18.com/market/rss",
+    "name": "CNBC TV18 — Markets",
+    "category": "markets",
+    "tier": 2,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.cnbctv18.com/business/rss",
+    "name": "CNBC TV18 — Business",
+    "category": "business",
+    "tier": 2,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://amarujala.com/rss/breaking-news.xml",
+    "name": "Amar Ujala — Breaking News",
+    "category": "news",
+    "tier": 2,
+    "language": "hi",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://amarujala.com/rss/business.xml",
+    "name": "Amar Ujala — Business",
+    "category": "business",
+    "tier": 2,
+    "language": "hi",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://navbharattimes.indiatimes.com/rss.cms",
+    "name": "Navbharat Times",
+    "category": "news",
+    "tier": 2,
+    "language": "hi",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://loksatta.com/loksatta-rss/",
+    "name": "Loksatta",
+    "category": "news",
+    "tier": 2,
+    "language": "mr",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://sandesh.com/page/rss",
+    "name": "Sandesh — Gujarati",
+    "category": "news",
+    "tier": 2,
+    "language": "gu",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.deccanherald.com/feeds/rss",
+    "name": "Deccan Herald",
+    "category": "news",
+    "tier": 2,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.thehindu.com/business/Economy/?service=rss",
+    "name": "The Hindu — Economy",
+    "category": "business",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.thehindu.com/business/Industry/?service=rss",
+    "name": "The Hindu — Industry",
+    "category": "industry",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.thehindu.com/business/markets/?service=rss",
+    "name": "The Hindu — Markets",
+    "category": "markets",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=10",
+    "name": "PIB — Ministry of Agriculture",
+    "category": "government",
+    "tier": 1,
+    "language": "en",
+    "sector": "agriculture",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=18",
+    "name": "PIB — Ministry of Textiles",
+    "category": "government",
+    "tier": 1,
+    "language": "en",
+    "sector": "textile",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=48",
+    "name": "PIB — Ministry of Railways",
+    "category": "government",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=11",
+    "name": "PIB — Ministry of Road Transport",
+    "category": "government",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://eprocure.gov.in/eprocure/app/rss",
+    "name": "CPPP — Central Tenders RSS",
+    "category": "tenders",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.constructionworld.in/rss.xml",
+    "name": "Construction World",
+    "category": "infrastructure",
+    "tier": 3,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://infra.economictimes.indiatimes.com/rss",
+    "name": "ET Infra",
+    "category": "infrastructure",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.fortuneindia.com/rss",
+    "name": "Fortune India",
+    "category": "business",
+    "tier": 2,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.smestreet.in/feed/",
+    "name": "SME Street",
+    "category": "msme",
+    "tier": 3,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.msmetimes.com/feed/",
+    "name": "MSME Times",
+    "category": "msme",
+    "tier": 3,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.dgft.gov.in/CP/rss",
+    "name": "DGFT — Export Notices",
+    "category": "export",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.sebi.gov.in/sebi_data/commondocs/RSS/rss_new.xml",
+    "name": "SEBI — Circulars",
+    "category": "finance",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://cbic.gov.in/htdocs-cbec/gst/gst-circular-rss.xml",
+    "name": "CBIC — GST Circulars",
+    "category": "compliance",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.incometax.gov.in/iec/foportal/help/rss",
+    "name": "Income Tax — News",
+    "category": "compliance",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://rbi.org.in/Scripts/RssFeed.aspx",
+    "name": "RBI — Press Releases",
+    "category": "finance",
+    "tier": 1,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.export.gov.in/rss.xml",
+    "name": "India Export — Trade News",
+    "category": "export",
+    "tier": 2,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://www.techcircle.in/rss",
+    "name": "Tech Circle",
+    "category": "technology",
+    "tier": 3,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  },
+  {
+    "url": "https://entrackr.com/feed/",
+    "name": "Entrackr — Startups",
+    "category": "startups",
+    "tier": 3,
+    "language": "en",
+    "active": true,
+    "scrapeMethod": "rss"
+  }
+]

@@ -1,0 +1,116 @@
+name: Refresh Data Cache
+
+on:
+  schedule:
+    # Every 2 hours
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
+    inputs:
+      endpoint:
+        description: 'Specific endpoint to refresh (leave empty for all)'
+        required: false
+        default: 'all'
+
+jobs:
+  refresh-tenders:
+    name: Refresh Tender Cache
+    runs-on: ubuntu-latest
+    env:
+      APP_URL: ${{ secrets.VERCEL_APP_URL }}
+      CRON_SECRET: ${{ secrets.CRON_SECRET }}
+    steps:
+      - name: Refresh GeM Tenders
+        run: |
+          curl -sf "${APP_URL}/api/gem-tenders" \
+            -H "X-Cron-Secret: ${CRON_SECRET}" \
+            || echo "GeM tender refresh failed (non-critical)"
+
+      - name: Refresh CPPP Central Tenders
+        run: |
+          curl -sf "${APP_URL}/api/cppp-tenders" \
+            -H "X-Cron-Secret: ${CRON_SECRET}" \
+            || echo "CPPP tender refresh failed (non-critical)"
+
+      - name: Refresh State Tenders
+        env:
+          STATES: "maharashtra karnataka gujarat tamilnadu up rajasthan mp"
+        run: |
+          for state in ${STATES}; do
+            curl -sf "${APP_URL}/api/cppp-tenders?state=${state}" \
+              -H "X-Cron-Secret: ${CRON_SECRET}" \
+              || echo "State tender refresh failed for: ${state}"
+            sleep 2
+          done
+
+  refresh-news:
+    name: Refresh News Cache
+    runs-on: ubuntu-latest
+    env:
+      APP_URL: ${{ secrets.VERCEL_APP_URL }}
+      CRON_SECRET: ${{ secrets.CRON_SECRET }}
+    steps:
+      - name: Refresh PIB Feed
+        run: |
+          curl -sf "${APP_URL}/api/pib-feed" \
+            -H "X-Cron-Secret: ${CRON_SECRET}" \
+            || echo "PIB feed refresh failed"
+
+      - name: Refresh English News
+        env:
+          CATEGORIES: "government business markets industry msme startups"
+        run: |
+          for cat in ${CATEGORIES}; do
+            curl -sf "${APP_URL}/api/news-aggregator?category=${cat}&language=en" \
+              -H "X-Cron-Secret: ${CRON_SECRET}" \
+              || echo "News refresh failed for category: ${cat}"
+            sleep 1
+          done
+
+      - name: Refresh Hindi News
+        run: |
+          curl -sf "${APP_URL}/api/news-aggregator?language=hi" \
+            -H "X-Cron-Secret: ${CRON_SECRET}" \
+            || echo "Hindi news refresh failed"
+
+  refresh-market:
+    name: Refresh Market Data Cache
+    runs-on: ubuntu-latest
+    env:
+      APP_URL: ${{ secrets.VERCEL_APP_URL }}
+      CRON_SECRET: ${{ secrets.CRON_SECRET }}
+    steps:
+      - name: Refresh Commodity Prices
+        run: |
+          curl -sf "${APP_URL}/api/commodity-prices" \
+            -H "X-Cron-Secret: ${CRON_SECRET}" \
+            || echo "Commodity prices refresh failed"
+
+      - name: Refresh Forex
+        run: |
+          curl -sf "${APP_URL}/api/forex" \
+            -H "X-Cron-Secret: ${CRON_SECRET}" \
+            || echo "Forex refresh failed"
+
+      - name: Refresh Stock Indices
+        run: |
+          curl -sf "${APP_URL}/api/stock-indices" \
+            -H "X-Cron-Secret: ${CRON_SECRET}" \
+            || echo "Stock indices refresh failed"
+
+  refresh-ai-brief:
+    name: Generate AI Daily Brief
+    runs-on: ubuntu-latest
+    env:
+      APP_URL: ${{ secrets.VERCEL_APP_URL }}
+      CRON_SECRET: ${{ secrets.CRON_SECRET }}
+    steps:
+      - name: Generate AI Brief (5 AM IST window)
+        run: |
+          HOUR=$(date -u +%H)
+          if [ "$HOUR" = "23" ] || [ "$HOUR" = "00" ]; then
+            curl -sf -X POST "${APP_URL}/api/ai-brief?refresh=true" \
+              -H "X-Cron-Secret: ${CRON_SECRET}" \
+              || echo "AI brief generation failed"
+          else
+            echo "Skipping AI brief - not in 5 AM IST window (current UTC hour: ${HOUR})"
+          fi

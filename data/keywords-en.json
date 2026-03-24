@@ -1,0 +1,193 @@
+[
+  {
+    "category": "funding",
+    "severity": "high",
+    "weight": 2.0,
+    "keywords": [
+      "new scheme", "loan scheme", "subsidy announced", "grant announced",
+      "funding scheme", "credit scheme", "capital subsidy", "interest subvention",
+      "mudra loan", "pmegp", "cgtmse", "stand-up india", "startup india",
+      "sidbi loan", "nabard", "msme loan", "credit guarantee",
+      "vc funding", "angel investment", "seed fund", "series a", "series b",
+      "nse emerge", "bse sme", "ipo msme", "sme ipo"
+    ],
+    "keywordsHi": [
+      "नई योजना", "ऋण योजना", "अनुदान", "वित्त पोषण",
+      "सब्सिडी", "मुद्रा ऋण", "स्टार्टअप फंडिंग"
+    ]
+  },
+  {
+    "category": "tender",
+    "severity": "medium",
+    "weight": 1.8,
+    "keywords": [
+      "tender", "bid", "rfp", "rfq", "eoi", "procurement",
+      "gem portal", "cppp", "government purchase", "public procurement",
+      "rate contract", "empanelment", "l1", "lowest bidder",
+      "corrigendum", "bid extension", "tender award", "work order",
+      "gem order", "defence procurement", "railways tender"
+    ],
+    "keywordsHi": [
+      "टेंडर", "निविदा", "सरकारी खरीद", "बोली"
+    ]
+  },
+  {
+    "category": "policy",
+    "severity": "high",
+    "weight": 2.0,
+    "keywords": [
+      "new policy", "policy change", "regulation update", "notification",
+      "gazette notification", "circular", "amendment", "new rule",
+      "compliance requirement", "mandatory", "effective from",
+      "gst rate change", "income tax amendment", "mca circular",
+      "dgft notification", "import duty", "export duty",
+      "fdi policy", "industrial policy", "budget announcement",
+      "finance bill", "parliament bill", "ordinance"
+    ],
+    "keywordsHi": [
+      "नीति परिवर्तन", "नोटिफिकेशन", "परिपत्र", "संशोधन",
+      "अधिसूचना", "बजट घोषणा", "नई नीति"
+    ]
+  },
+  {
+    "category": "compliance",
+    "severity": "high",
+    "weight": 2.2,
+    "keywords": [
+      "deadline extended", "due date", "last date", "gstr filing",
+      "income tax return", "itr deadline", "tds return", "advance tax",
+      "mca annual return", "roc filing", "epfo return", "esic return",
+      "gst payment", "penalty waiver", "late fee waiver",
+      "amnesty scheme", "compounding", "prosecution",
+      "msme form i", "udyam registration", "udyam re-registration"
+    ],
+    "keywordsHi": [
+      "आखिरी तारीख", "जीएसटी रिटर्न", "आयकर रिटर्न", "जुर्माना माफी",
+      "विस्तार", "TDS", "अनुपालन"
+    ]
+  },
+  {
+    "category": "market",
+    "severity": "medium",
+    "weight": 1.5,
+    "keywords": [
+      "price rise", "price fall", "commodity price", "mandi price",
+      "inflation", "wpi", "cpi", "wholesale price",
+      "steel price", "copper price", "cotton price", "crude oil",
+      "gold price", "silver price", "forex", "rupee",
+      "usd inr", "sensex", "nifty", "bse sme",
+      "cement price", "plastic price", "fuel surcharge",
+      "freight rates", "logistics cost", "shipping rates"
+    ],
+    "keywordsHi": [
+      "कीमत वृद्धि", "मंडी भाव", "सोने का भाव", "रुपया",
+      "महंगाई", "बाजार", "शेयर बाजार"
+    ]
+  },
+  {
+    "category": "technology",
+    "severity": "medium",
+    "weight": 1.3,
+    "keywords": [
+      "ai tool", "automation", "digital transformation", "erp",
+      "manufacturing software", "industry 4.0", "iot manufacturing",
+      "qr code", "digital payment", "upi business", "gst automation",
+      "invoice management", "inventory management", "e-commerce",
+      "digital marketing", "social media business", "whatsapp business",
+      "online marketplace", "flipkart seller", "amazon india seller",
+      "ondc", "open network"
+    ],
+    "keywordsHi": [
+      "डिजिटल", "AI", "प्रौद्योगिकी", "ऑटोमेशन",
+      "ई-कॉमर्स", "डिजिटल भुगतान"
+    ]
+  },
+  {
+    "category": "export",
+    "severity": "medium",
+    "weight": 1.6,
+    "keywords": [
+      "export incentive", "export subsidy", "rodtep", "meis",
+      "export promotion", "apeda", "mpeda", "dgft",
+      "free trade agreement", "fta", "trade deal",
+      "export target", "india exports", "merchandise exports",
+      "service exports", "gemsandstones", "leather export",
+      "textile export", "engineering export", "pharma export",
+      "anti-dumping", "safeguard duty", "countervailing",
+      "customs duty change", "hs code", "import policy"
+    ],
+    "keywordsHi": [
+      "निर्यात", "आयात", "व्यापार समझौता", "निर्यात प्रोत्साहन"
+    ]
+  },
+  {
+    "category": "infrastructure",
+    "severity": "medium",
+    "weight": 1.4,
+    "keywords": [
+      "industrial park", "msme cluster", "special economic zone",
+      "logistics park", "warehousing", "cold chain",
+      "highway project", "expressway", "road widening",
+      "port expansion", "airport expansion", "metro rail",
+      "railway freight", "multimodal", "gati shakti",
+      "plug and play", "msme land allotment", "industrial corridor",
+      "manufacturing hub", "production centre"
+    ],
+    "keywordsHi": [
+      "औद्योगिक पार्क", "इंफ्रास्ट्रक्चर", "एसईजेड",
+      "गोदाम", "लॉजिस्टिक्स", "हाईवे"
+    ]
+  },
+  {
+    "category": "critical",
+    "severity": "critical",
+    "weight": 3.0,
+    "keywords": [
+      "emergency", "scam alert", "fraud warning", "banned",
+      "prohibited", "enforcement action", "ed raid", "cbi",
+      "arrest", "fake scheme", "phishing", "cyber fraud",
+      "data breach", "system outage", "portal down",
+      "payment failure", "bank failure", "nbfc collapse",
+      "bank strike", "upi down", "gstn down"
+    ],
+    "keywordsHi": [
+      "आपातकाल", "धोखाधड़ी", "फर्जी", "घोटाला",
+      "प्रतिबंध", "सावधान"
+    ]
+  },
+  {
+    "category": "startup",
+    "severity": "low",
+    "weight": 1.1,
+    "keywords": [
+      "startup funding", "angel round", "seed funding", "pre-series",
+      "incubator", "accelerator", "startup india", "atal innovation",
+      "iit incubation", "iim venture", "technopreneur",
+      "social enterprise", "impact investment",
+      "product hunt", "new saas", "b2b startup",
+      "india fintech", "india agritech", "india healthtech",
+      "india edtech", "india logistics"
+    ],
+    "keywordsHi": [
+      "स्टार्टअप", "निवेश", "इनक्यूबेटर", "एक्सेलेरेटर"
+    ]
+  },
+  {
+    "category": "finance",
+    "severity": "high",
+    "weight": 1.9,
+    "keywords": [
+      "rbi rate cut", "repo rate", "interest rate change", "rbi policy",
+      "credit policy", "monetary policy", "bank rate",
+      "npa", "bad loan", "restructuring", "moratorium",
+      "credit rating", "debt restructuring",
+      "bankruptcy", "insolvency", "ibc", "nclt",
+      "equity investment", "fii", "fdi inflow",
+      "rupee depreciation", "forex reserves"
+    ],
+    "keywordsHi": [
+      "ब्याज दर", "रेपो रेट", "RBI नीति", "बैंक", "ऋण",
+      "NPА", "कर्ज"
+    ]
+  }
+]
