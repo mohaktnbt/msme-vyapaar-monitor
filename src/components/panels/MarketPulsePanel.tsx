@@ -39,7 +39,7 @@ function changeColor(pct?: number): string {
 }
 
 function Sparkline({ data }: { data: number[] }) {
-  const pts = data.map((v, i) => ({ v }))
+  const pts = data.map((v) => ({ v }))
   return (
     <ResponsiveContainer width={60} height={28}>
       <LineChart data={pts} margin={{ top: 2, right: 2, bottom: 2, left: 2 }}>
@@ -116,8 +116,6 @@ export const MarketPulsePanel: React.FC = () => {
 
   useEffect(() => { fetchAll() }, [fetchAll])
 
-  const tickerItems = [...MOCK_INDICES, ...MOCK_FOREX.slice(0, 1), ...MOCK_COMMODITIES.slice(4, 6)]
-
   return (
     <section style={{ background: '#f8fafc', borderRadius: 12, padding: 16, height: '100%', display: 'flex', flexDirection: 'column' }}>
       {/* Header */}
@@ -134,7 +132,7 @@ export const MarketPulsePanel: React.FC = () => {
 
       {/* Ticker */}
       <div style={{ overflowX: 'auto', background: '#fff', borderRadius: 8, border: '1px solid #e5e7eb', marginBottom: 12, display: 'flex' }}>
-        {(loadingIdx ? MOCK_INDICES : [...indices, ...forex.slice(0, 1)]).map((item) => (
+        {(loadingIdx ? MOCK_INDICES : [...indices, ...forex.slice(0, 1)]).map((item, i) => (
           <TickerItem key={item.id} item={item} />
         ))}
       </div>
