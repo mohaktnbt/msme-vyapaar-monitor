@@ -3,6 +3,8 @@ import './App.css'
 import { useDashboardStore } from './store/dashboardStore.js'
 import IndiaMapPanel from './components/map/IndiaMapPanel.js'
 import AIBriefPanel from './components/panels/AIBriefPanel.js'
+import { MarketTicker } from './components/MarketTicker.js'
+import { LanguageToggle } from './components/common/LanguageToggle.js'
 
 // Lazy-load heavier panels
 const TenderKanbanPanel = lazy(() => import('./components/panels/TenderKanbanPanel.js'))
@@ -13,6 +15,7 @@ const FundingRadarPanel = lazy(() => import('./components/panels/FundingRadarPan
 const NewsStreamPanel = lazy(() => import('./components/panels/NewsStreamPanel.js'))
 const ComplianceCalendarPanel = lazy(() => import('./components/panels/ComplianceCalendarPanel.js'))
 const ToolsTacticsPanel = lazy(() => import('./components/panels/ToolsTacticsPanel.js'))
+const AlertCenter = lazy(() => import('./components/AlertCenter.js'))
 
 type Sector = 'all' | 'manufacturing' | 'services' | 'agriculture' | 'retail' | 'export' | 'it'
 
@@ -35,6 +38,7 @@ const NAV_ITEMS = [
   { id: 'policy', icon: '📜', label: 'Policy' },
   { id: 'funding', icon: '💰', label: 'Funding' },
   { id: 'news', icon: '📡', label: 'News' },
+  { id: 'alerts', icon: '🔔', label: 'Alerts' },
   { id: 'compliance', icon: '📅', label: 'Compliance' },
   { id: 'tools', icon: '🛠️', label: 'Tools' },
 ]
@@ -63,6 +67,7 @@ function PanelWrapper({ children, id }: { children: React.ReactNode; id: string 
 function App() {
   const [activeSector, setActiveSector] = useState<Sector>('all')
   const [activePanel, setActivePanel] = useState<string>('brief')
+  const [language, setLanguage] = useState<'en' | 'hi'>('en')
   const { sidebarOpen, toggleSidebar, alertCount } = useDashboardStore()
 
   const scrollTo = (id: string) => {
@@ -100,6 +105,7 @@ function App() {
               </button>
             ))}
           </div>
+          <LanguageToggle language={language} onChange={setLanguage} />
           <div className="header-status">
             {alertCount > 0 && (
               <span className="alert-badge">{alertCount}</span>
@@ -109,6 +115,9 @@ function App() {
           </div>
         </div>
       </header>
+
+      {/* ── Market Ticker ── */}
+      <MarketTicker />
 
       <div className="app-body">
         {/* ── Sidebar Navigation ── */}
@@ -185,6 +194,13 @@ function App() {
               </Suspense>
             </PanelWrapper>
           </div>
+
+          {/* Alert Center — full width */}
+          <PanelWrapper id="alerts">
+            <Suspense fallback={<PanelSkeleton label="Alert Center" />}>
+              <AlertCenter />
+            </Suspense>
+          </PanelWrapper>
 
           {/* Tools & Tactics — full width */}
           <PanelWrapper id="tools">
