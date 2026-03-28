@@ -567,5 +567,427 @@
     "category": "technology",
     "tags": ["digital", "cloud", "ict", "technology", "transformation"],
     "active": true
+  },
+  {
+    "id": "atufs",
+    "name": "Amended Technology Upgradation Fund Scheme (A-TUFS)",
+    "nameHi": "संशोधित प्रौद्योगिकी उन्नयन निधि योजना (A-TUFS)",
+    "ministry": "Ministry of Textiles",
+    "department": "Ministry of Textiles",
+    "description": "Capital subsidy for technology upgradation in the textile sector. Provides 15% Capital Investment Subsidy (CIS) for specified segments like garmenting, technical textiles, and weaving.",
+    "descriptionHi": "वस्त्र क्षेत्र में प्रौद्योगिकी उन्नयन के लिए पूंजी सब्सिडी।",
+    "eligibility": {
+      "enterpriseCategories": ["micro", "small", "medium"],
+      "sectors": ["textile"],
+      "registrationRequired": "Udyam Registration",
+      "otherCriteria": "Textile manufacturing units undertaking technology upgradation"
+    },
+    "benefits": [
+      {
+        "type": "subsidy",
+        "description": "15% Capital Investment Subsidy (CIS) for garmenting/technical textiles; 10% for weaving/processing; max subsidy ₹30 Crore per unit",
+        "maxAmount": 300000000,
+        "subsidyPercent": 15
+      }
+    ],
+    "applicationUrl": "https://texmin.nic.in/atufs",
+    "nodal": "Ministry of Textiles, Textile Commissioner",
+    "lastUpdated": "2025-01-01",
+    "category": "technology",
+    "tags": ["textile", "technology", "machinery", "subsidy", "atufs"],
+    "active": true
+  },
+  {
+    "id": "tread",
+    "name": "Trade Related Entrepreneurship Assistance and Development (TREAD)",
+    "nameHi": "व्यापार संबंधित उद्यमिता सहायता एवं विकास (TREAD)",
+    "ministry": "Ministry of MSME",
+    "department": "Ministry of MSME",
+    "description": "Empowers women entrepreneurs through capacity building, counselling, training, and handholding. Government grant up to 30% of the loan/credit sanctioned by lending institutions to women-led projects.",
+    "descriptionHi": "महिला उद्यमियों को प्रशिक्षण और 30% तक अनुदान सहायता।",
+    "eligibility": {
+      "enterpriseCategories": ["micro", "small"],
+      "sectors": ["manufacturing", "services", "trading"],
+      "gender": "female",
+      "otherCriteria": "Women entrepreneurs, proposals routed through NGOs"
+    },
+    "benefits": [
+      {
+        "type": "grant",
+        "description": "Government grant up to 30% of total project cost (maximum ₹30 Lakh per project); remaining 70% as loan from banks",
+        "maxAmount": 3000000,
+        "subsidyPercent": 30
+      },
+      {
+        "type": "training",
+        "description": "Capacity building and entrepreneurship development training for women"
+      }
+    ],
+    "applicationUrl": "https://msme.gov.in/tread",
+    "nodal": "Ministry of MSME",
+    "lastUpdated": "2025-01-01",
+    "category": "skill-development",
+    "tags": ["women", "training", "grant", "entrepreneurship", "tread"],
+    "active": true
+  },
+  {
+    "id": "telangana-tidea",
+    "name": "Telangana T-IDEA (Industrial Development & Entrepreneur Advancement)",
+    "nameHi": "तेलंगाना T-IDEA (औद्योगिक विकास एवं उद्यमी उन्नति)",
+    "ministry": "Telangana State Government",
+    "department": "Telangana Industries & Commerce Department",
+    "description": "State incentive scheme offering investment subsidy, power tariff subsidy, stamp duty reimbursement, and land cost rebate for MSMEs setting up in Telangana.",
+    "descriptionHi": "तेलंगाना में MSME स्थापित करने के लिए निवेश सब्सिडी और अन्य प्रोत्साहन।",
+    "eligibility": {
+      "enterpriseCategories": ["micro", "small", "medium"],
+      "sectors": ["manufacturing"],
+      "states": ["Telangana"],
+      "otherCriteria": "New or expanding manufacturing units in Telangana"
+    },
+    "benefits": [
+      {
+        "type": "subsidy",
+        "description": "Investment subsidy: 15-35% on fixed capital investment; Power tariff subsidy ₹1-2/unit for 5 years; 100% stamp duty reimbursement",
+        "maxAmount": 50000000,
+        "subsidyPercent": 35
+      }
+    ],
+    "applicationUrl": "https://ipass.telangana.gov.in/",
+    "nodal": "Telangana Industries Department",
+    "lastUpdated": "2025-01-01",
+    "category": "finance",
+    "tags": ["telangana", "state-scheme", "investment-subsidy", "manufacturing"],
+    "active": true
+  },
+  {
+    "id": "maharashtra-midp",
+    "name": "Maharashtra Industrial Development Programme (MIDP)",
+    "nameHi": "महाराष्ट्र औद्योगिक विकास कार्यक्रम (MIDP)",
+    "ministry": "Maharashtra State Government",
+    "department": "Maharashtra Industries Department",
+    "description": "Comprehensive incentive package for MSMEs in Maharashtra including Industrial Promotion Subsidy (IPS), stamp duty exemption, electricity duty exemption, and interest subsidy.",
+    "descriptionHi": "महाराष्ट्र में MSME के लिए व्यापक प्रोत्साहन पैकेज।",
+    "eligibility": {
+      "enterpriseCategories": ["micro", "small", "medium"],
+      "sectors": ["manufacturing"],
+      "states": ["Maharashtra"],
+      "otherCriteria": "New or expanding manufacturing units with Udyam Registration"
+    },
+    "benefits": [
+      {
+        "type": "subsidy",
+        "description": "Industrial Promotion Subsidy (IPS): Net SGST refund for 7-10 years (capped at 40-100% of fixed capital based on zone); 100% stamp duty exemption; electricity duty exemption for 7-15 years",
+        "maxAmount": 100000000,
+        "subsidyPercent": 100
+      }
+    ],
+    "applicationUrl": "https://maitri.mahaonline.gov.in/",
+    "nodal": "Directorate of Industries, Maharashtra",
+    "lastUpdated": "2025-01-01",
+    "category": "finance",
+    "tags": ["maharashtra", "state-scheme", "ips", "stamp-duty", "manufacturing"],
+    "active": true
+  },
+  {
+    "id": "gujarat-icreate",
+    "name": "Gujarat iCreate — International Centre for Entrepreneurship and Technology",
+    "nameHi": "गुजरात iCreate — अंतरराष्ट्रीय उद्यमिता एवं प्रौद्योगिकी केंद्र",
+    "ministry": "Gujarat State Government",
+    "department": "Gujarat Industries Commissionerate",
+    "description": "Incubation and acceleration centre for hardware and IoT startups. Provides prototyping lab, mentorship, seed funding, and global market access.",
+    "descriptionHi": "हार्डवेयर और IoT स्टार्टअप के लिए इनक्यूबेशन केंद्र।",
+    "eligibility": {
+      "enterpriseCategories": ["micro", "small"],
+      "sectors": ["it", "manufacturing"],
+      "states": ["Gujarat"],
+      "otherCriteria": "Hardware/IoT startups and tech entrepreneurs"
+    },
+    "benefits": [
+      {
+        "type": "grant",
+        "description": "Seed funding up to ₹25 Lakh; free prototyping lab access; mentorship; global market connect",
+        "maxAmount": 2500000
+      },
+      {
+        "type": "training",
+        "description": "6-month residential incubation programme with access to fabrication lab and industry mentors"
+      }
+    ],
+    "applicationUrl": "https://icreate.org.in/",
+    "nodal": "iCreate Foundation, Gujarat",
+    "lastUpdated": "2025-01-01",
+    "category": "infrastructure",
+    "tags": ["gujarat", "state-scheme", "incubator", "hardware", "iot", "startup"],
+    "active": true
+  },
+  {
+    "id": "karnataka-elevate",
+    "name": "Karnataka Elevate — Startup Programme",
+    "nameHi": "कर्नाटक एलिवेट — स्टार्टअप कार्यक्रम",
+    "ministry": "Karnataka State Government",
+    "department": "Karnataka Innovation Technology Society (KITS)",
+    "description": "Identifies, promotes and fast-tracks promising startups in Karnataka. Provides seed funding, mentorship, investor connects, and government procurement preference.",
+    "descriptionHi": "कर्नाटक में आशाजनक स्टार्टअप को सीड फंडिंग और मेंटरशिप।",
+    "eligibility": {
+      "enterpriseCategories": ["micro", "small"],
+      "sectors": ["it", "manufacturing", "services", "healthcare"],
+      "states": ["Karnataka"],
+      "otherCriteria": "DPIIT recognized startup registered in Karnataka"
+    },
+    "benefits": [
+      {
+        "type": "equity",
+        "description": "Seed funding up to ₹50 Lakh per startup; marketing and branding support",
+        "maxAmount": 5000000
+      },
+      {
+        "type": "market-access",
+        "description": "Priority for government procurement; showcase at national and international events"
+      }
+    ],
+    "applicationUrl": "https://startup.karnataka.gov.in/elevate",
+    "nodal": "KITS, Startup Karnataka",
+    "lastUpdated": "2025-01-01",
+    "category": "finance",
+    "tags": ["karnataka", "state-scheme", "startup", "seed-fund", "elevate"],
+    "active": true
+  },
+  {
+    "id": "tansidco",
+    "name": "TANSIDCO — Tamil Nadu Small Industries Development Corporation Schemes",
+    "nameHi": "TANSIDCO — तमिलनाडु लघु उद्योग विकास निगम योजनाएं",
+    "ministry": "Tamil Nadu State Government",
+    "department": "TANSIDCO",
+    "description": "Provides developed land and sheds in industrial estates, term loans, raw material assistance, and marketing support for MSMEs in Tamil Nadu.",
+    "descriptionHi": "तमिलनाडु में MSME के लिए भूमि, शेड, ऋण और विपणन सहायता।",
+    "eligibility": {
+      "enterpriseCategories": ["micro", "small"],
+      "sectors": ["manufacturing"],
+      "states": ["Tamil Nadu"],
+      "registrationRequired": "Udyam Registration",
+      "otherCriteria": "MSMEs in Tamil Nadu, priority for SC/ST/Women entrepreneurs"
+    },
+    "benefits": [
+      {
+        "type": "loan",
+        "description": "Term loan up to ₹2 Crore for land, building, machinery; allotment of developed plots and ready-built sheds at subsidized rates",
+        "maxAmount": 20000000,
+        "interestRate": 9.0,
+        "loanTenure": 84
+      },
+      {
+        "type": "market-access",
+        "description": "Marketing support through exhibitions and government order procurement assistance"
+      }
+    ],
+    "applicationUrl": "https://www.tansidco.tn.gov.in/",
+    "nodal": "TANSIDCO",
+    "lastUpdated": "2025-01-01",
+    "category": "infrastructure",
+    "tags": ["tamilnadu", "state-scheme", "land", "shed", "loan", "tansidco"],
+    "active": true
+  },
+  {
+    "id": "pli-pharma",
+    "name": "PLI Scheme for Pharmaceuticals",
+    "nameHi": "फार्मा के लिए PLI योजना",
+    "ministry": "Ministry of Chemicals & Fertilizers",
+    "department": "Department of Pharmaceuticals",
+    "description": "Production Linked Incentive to promote domestic manufacturing of high-value pharmaceutical products including complex generics, patented drugs, APIs, and KSMs.",
+    "descriptionHi": "उच्च मूल्य वाले फार्मा उत्पादों के घरेलू विनिर्माण को प्रोत्साहन।",
+    "eligibility": {
+      "enterpriseCategories": ["small", "medium"],
+      "sectors": ["pharma"],
+      "otherCriteria": "Pharmaceutical manufacturers with minimum investment threshold; two groups based on revenue"
+    },
+    "benefits": [
+      {
+        "type": "subsidy",
+        "description": "Incentive of 3-10% on incremental sales over base year for 6 years. Total scheme outlay ₹15,000 Crore.",
+        "maxAmount": 200000000,
+        "subsidyPercent": 10
+      }
+    ],
+    "applicationUrl": "https://pharmaceuticals.gov.in/pli",
+    "nodal": "Department of Pharmaceuticals",
+    "lastUpdated": "2025-01-01",
+    "category": "finance",
+    "tags": ["pli", "pharma", "api", "manufacturing", "incentive"],
+    "active": true
+  },
+  {
+    "id": "pli-electronic-components",
+    "name": "PLI Scheme for IT Hardware & Electronic Components",
+    "nameHi": "आईटी हार्डवेयर एवं इलेक्ट्रॉनिक कंपोनेंट्स के लिए PLI योजना",
+    "ministry": "Ministry of Electronics and IT (MeiTY)",
+    "department": "MeiTY",
+    "description": "Production Linked Incentive for manufacturing laptops, tablets, servers, all-in-one PCs, and electronic components in India.",
+    "descriptionHi": "भारत में आईटी हार्डवेयर और इलेक्ट्रॉनिक कंपोनेंट विनिर्माण को प्रोत्साहन।",
+    "eligibility": {
+      "enterpriseCategories": ["small", "medium"],
+      "sectors": ["it", "manufacturing"],
+      "otherCriteria": "IT hardware manufacturers with minimum investment and incremental production thresholds"
+    },
+    "benefits": [
+      {
+        "type": "subsidy",
+        "description": "Incentive of 1-4% on net incremental sales for 6 years. Total outlay ₹17,000 Crore.",
+        "maxAmount": 100000000,
+        "subsidyPercent": 4
+      }
+    ],
+    "applicationUrl": "https://meity.gov.in/pli-it-hardware",
+    "nodal": "MeiTY",
+    "lastUpdated": "2025-01-01",
+    "category": "finance",
+    "tags": ["pli", "electronics", "hardware", "it", "manufacturing"],
+    "active": true
+  },
+  {
+    "id": "raising-and-accelerating-msme",
+    "name": "RAMP — Raising and Accelerating MSME Performance",
+    "nameHi": "RAMP — MSME प्रदर्शन उन्नयन एवं त्वरण",
+    "ministry": "Ministry of MSME",
+    "department": "Ministry of MSME",
+    "description": "World Bank-assisted programme to improve MSME access to market and credit, strengthen institutional framework, and enhance technology adoption and inclusiveness.",
+    "descriptionHi": "विश्व बैंक सहायता प्राप्त MSME प्रदर्शन सुधार कार्यक्रम।",
+    "eligibility": {
+      "enterpriseCategories": ["micro", "small", "medium"],
+      "sectors": ["manufacturing", "services"],
+      "registrationRequired": "Udyam Registration",
+      "otherCriteria": "MSMEs across India, focus on credit-starved and technology-lagging units"
+    },
+    "benefits": [
+      {
+        "type": "grant",
+        "description": "₹6,062 Crore programme covering market access support, technology upgradation, credit flow improvement, and green manufacturing initiatives"
+      },
+      {
+        "type": "training",
+        "description": "Capacity building, digital skill training, and institutional strengthening"
+      }
+    ],
+    "applicationUrl": "https://msme.gov.in/ramp",
+    "nodal": "Ministry of MSME",
+    "lastUpdated": "2025-01-01",
+    "category": "technology",
+    "tags": ["ramp", "world-bank", "market-access", "credit", "technology"],
+    "active": true
+  },
+  {
+    "id": "msme-innovative",
+    "name": "MSME Innovative Scheme (Incubation, Design, IPR)",
+    "nameHi": "MSME नवाचार योजना (इनक्यूबेशन, डिज़ाइन, आईपीआर)",
+    "ministry": "Ministry of MSME",
+    "department": "Ministry of MSME",
+    "description": "Merged scheme combining Incubation, Design Clinic, and IPR facilitation for MSMEs. Supports product innovation, design improvement, and intellectual property protection.",
+    "descriptionHi": "MSME के लिए इनक्यूबेशन, डिज़ाइन और बौद्धिक संपदा अधिकार सुविधा।",
+    "eligibility": {
+      "enterpriseCategories": ["micro", "small", "medium"],
+      "sectors": ["manufacturing", "services", "it"],
+      "registrationRequired": "Udyam Registration"
+    },
+    "benefits": [
+      {
+        "type": "grant",
+        "description": "Incubation support up to ₹15 Lakh per idea; Design project subsidy up to 75% for micro; IPR reimbursement: patents (₹5 Lakh domestic, ₹25 Lakh international), trademarks (₹2 Lakh), GI (₹5 Lakh)",
+        "maxAmount": 2500000,
+        "subsidyPercent": 75
+      }
+    ],
+    "applicationUrl": "https://innovative.msme.gov.in/",
+    "nodal": "Ministry of MSME",
+    "lastUpdated": "2025-01-01",
+    "category": "technology",
+    "tags": ["innovation", "incubation", "design", "ipr", "patent"],
+    "active": true
+  },
+  {
+    "id": "coir-vikas-yojana",
+    "name": "Coir Vikas Yojana",
+    "nameHi": "कॉयर विकास योजना",
+    "ministry": "Ministry of MSME",
+    "department": "Coir Board",
+    "description": "Comprehensive scheme for development of coir industry including skill upgradation, technology modernization, trade and export promotion, and coir cluster development.",
+    "descriptionHi": "कॉयर उद्योग विकास के लिए व्यापक योजना — कौशल, प्रौद्योगिकी, निर्यात प्रोत्साहन।",
+    "eligibility": {
+      "enterpriseCategories": ["micro", "small"],
+      "sectors": ["manufacturing"],
+      "otherCriteria": "Coir workers, artisans, and coir manufacturing units, primarily in Kerala, Tamil Nadu, Karnataka, and Andhra Pradesh"
+    },
+    "benefits": [
+      {
+        "type": "subsidy",
+        "description": "Machinery subsidy up to 40%, skill training with ₹1,000 stipend/month, export market development assistance",
+        "subsidyPercent": 40
+      },
+      {
+        "type": "training",
+        "description": "Skill upgradation training (2-6 months) with stipend for coir workers"
+      }
+    ],
+    "applicationUrl": "https://coirboard.gov.in/",
+    "nodal": "Coir Board",
+    "lastUpdated": "2025-01-01",
+    "category": "skill-development",
+    "tags": ["coir", "training", "subsidy", "export", "cluster"],
+    "active": true
+  },
+  {
+    "id": "usttad",
+    "name": "USTTAD — Upgrading the Skills & Training in Traditional Arts/Crafts for Development",
+    "nameHi": "USTTAD — पारंपरिक कला/शिल्प में कौशल उन्नयन एवं प्रशिक्षण",
+    "ministry": "Ministry of Minority Affairs",
+    "department": "Ministry of Minority Affairs",
+    "description": "Preserves and promotes the rich heritage of traditional arts and crafts of minority communities. Provides skill training, design development, and market linkages.",
+    "descriptionHi": "अल्पसंख्यक समुदायों की पारंपरिक कलाओं और शिल्पों के संरक्षण एवं प्रोत्साहन के लिए योजना।",
+    "eligibility": {
+      "enterpriseCategories": ["micro"],
+      "sectors": ["manufacturing", "services"],
+      "socialCategories": ["Minority"],
+      "otherCriteria": "Master craftsmen and artisans from minority communities"
+    },
+    "benefits": [
+      {
+        "type": "training",
+        "description": "Skill training for 6-12 months; ₹500/day stipend; toolkit support worth up to ₹10,000"
+      },
+      {
+        "type": "market-access",
+        "description": "Marketing support through Hunar Haat exhibitions across India"
+      }
+    ],
+    "applicationUrl": "https://minorityaffairs.gov.in/usttad",
+    "nodal": "Ministry of Minority Affairs",
+    "lastUpdated": "2025-01-01",
+    "category": "skill-development",
+    "tags": ["minority", "traditional-arts", "crafts", "training", "hunar-haat"],
+    "active": true
+  },
+  {
+    "id": "nsic-marketing-support",
+    "name": "NSIC — Marketing Support & Single Point Registration (SPRS)",
+    "nameHi": "NSIC — विपणन सहायता एवं एकल बिंदु पंजीकरण",
+    "ministry": "Ministry of MSME",
+    "department": "NSIC",
+    "description": "NSIC registration enables MSMEs to get preference in government purchases, exemption from earnest money deposit (EMD) and security deposit in government tenders, and free listing on government e-marketplace.",
+    "descriptionHi": "सरकारी खरीद में MSME को प्राथमिकता — EMD और सुरक्षा जमा से छूट।",
+    "eligibility": {
+      "enterpriseCategories": ["micro", "small"],
+      "sectors": ["manufacturing", "services"],
+      "registrationRequired": "Udyam Registration"
+    },
+    "benefits": [
+      {
+        "type": "market-access",
+        "description": "Exemption from EMD and security deposit in government tenders; preferential treatment in government procurement under Public Procurement Policy (25% reservation for MSMEs); consortia formation support for large tenders"
+      }
+    ],
+    "applicationUrl": "https://www.nsic.co.in/MSME-SPRS.aspx",
+    "nodal": "NSIC",
+    "lastUpdated": "2025-01-01",
+    "category": "marketing",
+    "tags": ["nsic", "marketing", "tender", "government-procurement", "sprs"],
+    "active": true
   }
 ]
