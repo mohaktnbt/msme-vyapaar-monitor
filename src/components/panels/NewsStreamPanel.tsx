@@ -98,11 +98,9 @@ function NewsCard({ item }: { item: NewsItem }) {
 
 // ── Main Panel ────────────────────────────────────────────────────────────────
 
-const PAGE_SIZE = 10
-
 export const NewsStreamPanel: React.FC = () => {
   const [allNews, setAllNews] = useState<NewsItem[]>([])
-  const [page, setPage] = useState(1)
+  const [_page, setPage] = useState(1)
   const [hasMore, setHasMore] = useState(true)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
