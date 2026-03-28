@@ -61,18 +61,24 @@
 - **Commit `c8b6ca5`**: docs: add AGENTS.md — comprehensive AI agent context document
 - **Build status**: Compiles with 3 unused-variable warnings (fixed in Session 2)
 
-### Session 2 — 2026-03-28 (ClawTeam Audit + Enhancement)
-- **What was done**: Deep audit, gap analysis, build fixes, data enrichment, missing services/hooks/components
-- **Build status after session**: PASSES cleanly
-- **Fixes applied**: Removed unused `i` param in MarketPulsePanel, removed unused `PAGE_SIZE`/`page` in NewsStreamPanel
-- **Files created**: GAP_ANALYSIS.md, TIMELINE.md, plus new data files, services, hooks, components (see commits below)
-- **Git commits**: [will be updated as work progresses]
+### Session 2 — 2026-03-28 (Parallel Agent Build)
+- **What was done**:
+  - Deep audit of entire codebase, created GAP_ANALYSIS.md
+  - Fixed 3 TypeScript build errors (unused variables in MarketPulsePanel, NewsStreamPanel)
+  - Spawned 4 parallel agents for missing pieces:
+    - **Data Architect**: Created `data/keywords-hi.json` (11 Hindi keyword categories), `data/industrial-clusters.json` (30 MSME clusters), `data/compliance-calendar.json` (24 deadlines), `data/sectors.json` (14 sectors)
+    - **API Engineer**: Created `api/gazette.ts`, `api/gst-updates.ts`, `api/dgft.ts`, `api/ireps-tenders.ts`, `api/sme-ipo.ts` (5 new edge functions)
+    - **Services/Hooks Engineer**: Created `src/services/redis.ts`, `src/services/feeds.ts`, `src/services/tenders.ts`, `src/services/market.ts`, `src/services/govt-data.ts`, `src/hooks/useNewsStream.ts`, `src/hooks/useTenders.ts`, `src/hooks/useMarketData.ts`, `src/hooks/useSchemes.ts`, `src/hooks/useDataFreshness.ts`, `src/context/DashboardContext.tsx`
+    - **Frontend Engineer**: Created `src/components/MarketTicker.tsx`, `src/components/CommodityChart.tsx`, `src/components/AlertCenter.tsx`, `src/components/common/Badge.tsx`, `src/components/common/LanguageToggle.tsx`, `src/components/common/SearchBar.tsx`, `src/components/common/RupeeFormat.tsx`, `src/components/common/EmptyState.tsx`
+- **Build status after session**: PASSES cleanly (`tsc && vite build` succeeds)
+- **Files created**: 29 new files across data/, api/, src/services/, src/hooks/, src/context/, src/components/
+- **Known issues**: Large chunk warnings (maplibre 802KB, index 923KB) — cosmetic only
 
 ## Current State Summary
-- **What works**: Full build passes. 14 API endpoints, 10 dashboard panels, 7 UI components, Zustand store, API service layer, formatters, 50 RSS feeds, 20 schemes, 11 keyword categories, GitHub Actions cron, Vercel config
-- **What's partially built**: schemes.json (20/30+ target), IndiaMapPanel (hardcoded mock data)
-- **What's not started**: Hindi keyword dict, industrial clusters data, compliance calendar data, sectors taxonomy, gazette/GST/DGFT API endpoints, IREPS/state tenders expansion, SME IPO endpoint, React hooks layer, DashboardContext, MarketTicker, CommodityChart, AlertCenter, i18n, PWA
-- **Blocking issues**: None — all existing code compiles and the app renders
+- **What works**: Full build passes. 19 API endpoints, 10 dashboard panels + 3 new components + 5 common UI components, Zustand store, API service layer, 5 service modules, 5 React hooks, DashboardContext, formatters, 50 RSS feeds, 20 schemes, 11+11 keyword categories (EN+HI), 30 industrial clusters, 24 compliance deadlines, 14 sector definitions, GitHub Actions cron, Vercel config
+- **What's partially built**: IndiaMapPanel (hardcoded mock data), schemes.json (20 schemes — could add more)
+- **What's not started**: i18n (react-i18next), PWA manifest/service worker, wiring new components (MarketTicker, AlertCenter, CommodityChart) into App.tsx layout, more state tender portals
+- **Blocking issues**: None — all code compiles and the app renders
 
 ## Data Sources Target (100+)
 - Government APIs: data.gov.in, PIB RSS, MyScheme, Gazette, GST, DGFT
