@@ -91,4 +91,47 @@ export const api = {
   // ── Data.gov ──────────────────────────────────────────────────────────────
   getDataGov: (dataset: string) =>
     apiFetch<ApiResponse<unknown>>(`data-gov${buildQuery({ dataset })}`),
+
+  // ── Weather ───────────────────────────────────────────────────────────────
+  fetchWeather: (state?: string, district?: string) =>
+    apiFetch<ApiResponse<unknown>>(
+      `weather${buildQuery({ state: state ?? '', district: district ?? '' })}`
+    ),
+
+  // ── Utilities: Dam / Reservoir levels ─────────────────────────────────────
+  fetchDamLevels: (state?: string) =>
+    apiFetch<ApiResponse<unknown>>(`dam-levels${buildQuery({ state: state ?? '' })}`),
+
+  // ── Utilities: Power grid ─────────────────────────────────────────────────
+  fetchPowerStatus: () =>
+    apiFetch<ApiResponse<unknown>>('power-status'),
+
+  // ── District budget ───────────────────────────────────────────────────────
+  fetchDistrictBudget: (state: string, district: string) =>
+    apiFetch<ApiResponse<unknown>>(
+      `district-budget${buildQuery({ state, district })}`
+    ),
+
+  // ── Transport projects ────────────────────────────────────────────────────
+  fetchTransportProjects: (filters?: {
+    state?: string
+    type?: string
+    status?: string
+    minValueCr?: number
+  }) =>
+    apiFetch<ApiResponse<unknown>>(
+      `transport-projects${buildQuery(filters ?? {})}`
+    ),
+
+  // ── Hyperlocal news ───────────────────────────────────────────────────────
+  fetchHyperlocalNews: (state: string, district: string) =>
+    apiFetch<ApiResponse<unknown>>(
+      `hyperlocal-news${buildQuery({ state, district })}`
+    ),
+
+  // ── Electricity tariff ────────────────────────────────────────────────────
+  fetchElectricityTariff: (state?: string) =>
+    apiFetch<ApiResponse<unknown>>(
+      `electricity-tariff${buildQuery({ state: state ?? '' })}`
+    ),
 }
