@@ -132,7 +132,7 @@ export const MarketPulsePanel: React.FC = () => {
 
       {/* Ticker */}
       <div style={{ overflowX: 'auto', background: '#fff', borderRadius: 8, border: '1px solid #e5e7eb', marginBottom: 12, display: 'flex' }}>
-        {(loadingIdx ? MOCK_INDICES : [...indices, ...forex.slice(0, 1)]).map((item, i) => (
+        {(loadingIdx ? MOCK_INDICES : [...indices, ...forex.slice(0, 1)]).map((item) => (
           <TickerItem key={item.id} item={item} />
         ))}
       </div>

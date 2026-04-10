@@ -3,6 +3,8 @@ import './App.css'
 import { useDashboardStore } from './store/dashboardStore.js'
 import IndiaMapPanel from './components/map/IndiaMapPanel.js'
 import AIBriefPanel from './components/panels/AIBriefPanel.js'
+import { MarketTicker } from './components/MarketTicker.js'
+import { LanguageToggle } from './components/common/LanguageToggle.js'
 
 // Lazy-load heavier panels
 const TenderKanbanPanel = lazy(() => import('./components/panels/TenderKanbanPanel.js'))
@@ -13,6 +15,15 @@ const FundingRadarPanel = lazy(() => import('./components/panels/FundingRadarPan
 const NewsStreamPanel = lazy(() => import('./components/panels/NewsStreamPanel.js'))
 const ComplianceCalendarPanel = lazy(() => import('./components/panels/ComplianceCalendarPanel.js'))
 const ToolsTacticsPanel = lazy(() => import('./components/panels/ToolsTacticsPanel.js'))
+const AlertCenter = lazy(() => import('./components/AlertCenter.js'))
+
+// New civic-data panels (forthepeople.in inspired)
+const WeatherRainfallPanel = lazy(() => import('./components/panels/WeatherRainfallPanel.js'))
+const DamWaterPanel = lazy(() => import('./components/panels/DamWaterPanel.js'))
+const PowerGridPanel = lazy(() => import('./components/panels/PowerGridPanel.js'))
+const TransportInfraPanel = lazy(() => import('./components/panels/TransportInfraPanel.js'))
+const DistrictOpportunityPanel = lazy(() => import('./components/panels/DistrictOpportunityPanel.js'))
+const DataSourcesPanel = lazy(() => import('./components/panels/DataSourcesPanel.js'))
 
 type Sector = 'all' | 'manufacturing' | 'services' | 'agriculture' | 'retail' | 'export' | 'it'
 
@@ -28,14 +39,21 @@ const SECTOR_FILTERS: { value: Sector; label: string }[] = [
 
 const NAV_ITEMS = [
   { id: 'brief', icon: '🤖', label: 'AI Brief' },
+  { id: 'district', icon: '📊', label: 'District Score' },
   { id: 'map', icon: '🗺️', label: 'Map' },
   { id: 'tenders', icon: '📋', label: 'Tenders' },
   { id: 'market', icon: '📈', label: 'Market' },
+  { id: 'weather', icon: '🌦️', label: 'Weather' },
+  { id: 'dams', icon: '💧', label: 'Water' },
+  { id: 'power', icon: '⚡', label: 'Power' },
+  { id: 'transport', icon: '🛣️', label: 'Transport' },
   { id: 'schemes', icon: '🏛️', label: 'Schemes' },
   { id: 'policy', icon: '📜', label: 'Policy' },
   { id: 'funding', icon: '💰', label: 'Funding' },
   { id: 'news', icon: '📡', label: 'News' },
+  { id: 'alerts', icon: '🔔', label: 'Alerts' },
   { id: 'compliance', icon: '📅', label: 'Compliance' },
+  { id: 'sources', icon: '📚', label: 'Sources' },
   { id: 'tools', icon: '🛠️', label: 'Tools' },
 ]
 
@@ -63,6 +81,7 @@ function PanelWrapper({ children, id }: { children: React.ReactNode; id: string 
 function App() {
   const [activeSector, setActiveSector] = useState<Sector>('all')
   const [activePanel, setActivePanel] = useState<string>('brief')
+  const [language, setLanguage] = useState<'en' | 'hi'>('en')
   const { sidebarOpen, toggleSidebar, alertCount } = useDashboardStore()
 
   const scrollTo = (id: string) => {
@@ -100,6 +119,7 @@ function App() {
               </button>
             ))}
           </div>
+          <LanguageToggle language={language} onChange={setLanguage} />
           <div className="header-status">
             {alertCount > 0 && (
               <span className="alert-badge">{alertCount}</span>
@@ -109,6 +129,9 @@ function App() {
           </div>
         </div>
       </header>
+
+      {/* ── Market Ticker ── */}
+      <MarketTicker />
 
       <div className="app-body">
         {/* ── Sidebar Navigation ── */}
@@ -132,6 +155,13 @@ function App() {
             <AIBriefPanel />
           </PanelWrapper>
 
+          {/* District Opportunity Score — full width, the flagship feature */}
+          <PanelWrapper id="district">
+            <Suspense fallback={<PanelSkeleton label="District Opportunity Score" />}>
+              <DistrictOpportunityPanel />
+            </Suspense>
+          </PanelWrapper>
+
           {/* Map + Tender Kanban — side by side */}
           <div className="panel-row-2">
             <PanelWrapper id="map">
@@ -140,6 +170,34 @@ function App() {
             <PanelWrapper id="tenders">
               <Suspense fallback={<PanelSkeleton label="Tender Kanban" />}>
                 <TenderKanbanPanel />
+              </Suspense>
+            </PanelWrapper>
+          </div>
+
+          {/* Weather + Dam Water — civic data row 1 */}
+          <div className="panel-row-2">
+            <PanelWrapper id="weather">
+              <Suspense fallback={<PanelSkeleton label="Weather & Monsoon" />}>
+                <WeatherRainfallPanel />
+              </Suspense>
+            </PanelWrapper>
+            <PanelWrapper id="dams">
+              <Suspense fallback={<PanelSkeleton label="Dam Levels" />}>
+                <DamWaterPanel />
+              </Suspense>
+            </PanelWrapper>
+          </div>
+
+          {/* Power Grid + Transport Infra — civic data row 2 */}
+          <div className="panel-row-2">
+            <PanelWrapper id="power">
+              <Suspense fallback={<PanelSkeleton label="Power Grid Status" />}>
+                <PowerGridPanel />
+              </Suspense>
+            </PanelWrapper>
+            <PanelWrapper id="transport">
+              <Suspense fallback={<PanelSkeleton label="Transport & Infra" />}>
+                <TransportInfraPanel />
               </Suspense>
             </PanelWrapper>
           </div>
@@ -185,6 +243,20 @@ function App() {
               </Suspense>
             </PanelWrapper>
           </div>
+
+          {/* Alert Center — full width */}
+          <PanelWrapper id="alerts">
+            <Suspense fallback={<PanelSkeleton label="Alert Center" />}>
+              <AlertCenter />
+            </Suspense>
+          </PanelWrapper>
+
+          {/* Data Sources transparency — full width */}
+          <PanelWrapper id="sources">
+            <Suspense fallback={<PanelSkeleton label="Data Sources" />}>
+              <DataSourcesPanel />
+            </Suspense>
+          </PanelWrapper>
 
           {/* Tools & Tactics — full width */}
           <PanelWrapper id="tools">

@@ -1,0 +1,130 @@
+{
+  "sectors": [
+    {
+      "id": "manufacturing",
+      "name": "General Manufacturing",
+      "nameHi": "सामान्य विनिर्माण",
+      "subsectors": ["metal-fabrication", "plastics", "rubber", "paper", "packaging", "electrical-equipment"],
+      "hsnCodes": ["72-83", "84-85"],
+      "keyStates": ["Maharashtra", "Gujarat", "Tamil Nadu", "Uttar Pradesh", "Karnataka"],
+      "avgUnits": 200000
+    },
+    {
+      "id": "services",
+      "name": "Business Services",
+      "nameHi": "व्यावसायिक सेवाएं",
+      "subsectors": ["consulting", "accounting", "legal", "staffing", "facility-management", "logistics"],
+      "hsnCodes": ["99"],
+      "keyStates": ["Maharashtra", "Delhi", "Karnataka", "Tamil Nadu", "Telangana"],
+      "avgUnits": 350000
+    },
+    {
+      "id": "trading",
+      "name": "Trading & Distribution",
+      "nameHi": "व्यापार एवं वितरण",
+      "subsectors": ["wholesale", "distribution", "import-export", "e-commerce", "commission-agents"],
+      "hsnCodes": ["01-99"],
+      "keyStates": ["Maharashtra", "Delhi", "Gujarat", "Tamil Nadu", "West Bengal"],
+      "avgUnits": 500000
+    },
+    {
+      "id": "agriculture",
+      "name": "Agriculture & Allied",
+      "nameHi": "कृषि एवं संबद्ध",
+      "subsectors": ["crop-production", "dairy", "poultry", "fisheries", "horticulture", "sericulture"],
+      "hsnCodes": ["01-14"],
+      "keyStates": ["Uttar Pradesh", "Maharashtra", "Madhya Pradesh", "Rajasthan", "Punjab"],
+      "avgUnits": 300000
+    },
+    {
+      "id": "it",
+      "name": "Information Technology & ITeS",
+      "nameHi": "सूचना प्रौद्योगिकी एवं आईटीईएस",
+      "subsectors": ["software-development", "saas", "bpo", "data-analytics", "cybersecurity", "ai-ml"],
+      "hsnCodes": ["9983", "9984"],
+      "keyStates": ["Karnataka", "Telangana", "Maharashtra", "Tamil Nadu", "Delhi"],
+      "avgUnits": 80000
+    },
+    {
+      "id": "retail",
+      "name": "Retail & Consumer",
+      "nameHi": "खुदरा एवं उपभोक्ता",
+      "subsectors": ["grocery", "apparel-retail", "electronics-retail", "fmcg", "online-retail", "franchise"],
+      "hsnCodes": ["01-99"],
+      "keyStates": ["Maharashtra", "Delhi", "Tamil Nadu", "Karnataka", "Uttar Pradesh"],
+      "avgUnits": 800000
+    },
+    {
+      "id": "export",
+      "name": "Export-Oriented Units",
+      "nameHi": "निर्यातोन्मुखी इकाइयां",
+      "subsectors": ["gems-jewellery", "leather-export", "engineering-export", "handicraft-export", "marine-export", "agri-export"],
+      "hsnCodes": ["01-99"],
+      "keyStates": ["Gujarat", "Maharashtra", "Tamil Nadu", "Rajasthan", "Kerala"],
+      "avgUnits": 50000
+    },
+    {
+      "id": "construction",
+      "name": "Construction & Real Estate",
+      "nameHi": "निर्माण एवं रियल एस्टेट",
+      "subsectors": ["civil-construction", "interior-design", "building-materials", "plumbing-electrical", "ready-mix-concrete", "prefab"],
+      "hsnCodes": ["68-70", "9954"],
+      "keyStates": ["Maharashtra", "Karnataka", "Tamil Nadu", "Delhi", "Uttar Pradesh"],
+      "avgUnits": 150000
+    },
+    {
+      "id": "healthcare",
+      "name": "Healthcare & Medical Devices",
+      "nameHi": "स्वास्थ्य सेवा एवं चिकित्सा उपकरण",
+      "subsectors": ["hospitals", "diagnostics", "medical-devices", "telemedicine", "ayurveda", "dental"],
+      "hsnCodes": ["9018-9022", "3001-3006"],
+      "keyStates": ["Maharashtra", "Tamil Nadu", "Karnataka", "Delhi", "Telangana"],
+      "avgUnits": 60000
+    },
+    {
+      "id": "textile",
+      "name": "Textiles & Garments",
+      "nameHi": "कपड़ा एवं वस्त्र",
+      "subsectors": ["spinning", "weaving", "knitting", "garment", "dyeing", "technical-textiles"],
+      "hsnCodes": ["50-63"],
+      "keyStates": ["Tamil Nadu", "Gujarat", "Maharashtra", "Punjab", "Rajasthan"],
+      "avgUnits": 120000
+    },
+    {
+      "id": "pharma",
+      "name": "Pharmaceuticals & Biotech",
+      "nameHi": "फार्मास्यूटिकल्स एवं बायोटेक",
+      "subsectors": ["formulations", "bulk-drugs", "api", "biotech", "nutraceuticals", "ayurvedic"],
+      "hsnCodes": ["3001-3006"],
+      "keyStates": ["Gujarat", "Maharashtra", "Telangana", "Himachal Pradesh", "Goa"],
+      "avgUnits": 25000
+    },
+    {
+      "id": "defence",
+      "name": "Defence & Aerospace",
+      "nameHi": "रक्षा एवं एयरोस्पेस",
+      "subsectors": ["ammunition", "electronics-defence", "uav-drones", "shipbuilding", "armoured-vehicles", "aerospace-components"],
+      "hsnCodes": ["8710", "8801-8805", "9301-9307"],
+      "keyStates": ["Karnataka", "Telangana", "Tamil Nadu", "Uttar Pradesh", "Maharashtra"],
+      "avgUnits": 5000
+    },
+    {
+      "id": "food",
+      "name": "Food Processing",
+      "nameHi": "खाद्य प्रसंस्करण",
+      "subsectors": ["dairy-processing", "grain-milling", "fruits-vegetables", "meat-processing", "bakery-confectionery", "ready-to-eat"],
+      "hsnCodes": ["15-21"],
+      "keyStates": ["Maharashtra", "Andhra Pradesh", "Tamil Nadu", "Uttar Pradesh", "Gujarat"],
+      "avgUnits": 90000
+    },
+    {
+      "id": "chemical",
+      "name": "Chemicals & Petrochemicals",
+      "nameHi": "रसायन एवं पेट्रोकेमिकल्स",
+      "subsectors": ["basic-chemicals", "specialty-chemicals", "agrochemicals", "paints-coatings", "adhesives", "petrochemicals"],
+      "hsnCodes": ["28-38"],
+      "keyStates": ["Gujarat", "Maharashtra", "Tamil Nadu", "Rajasthan", "Andhra Pradesh"],
+      "avgUnits": 35000
+    }
+  ]
+}
